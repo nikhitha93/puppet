@@ -1,10 +1,8 @@
 package { 'httpd':
     ensure => installed,
-    
 }
-package { 'httpd':
 
-    
-    ensure => absent,
-    
+service { "httpd":
+    ensure     => running,
+    enable     => true,
 }
